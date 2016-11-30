@@ -168,7 +168,7 @@ def _show_cluster_template(cluster_template):
            help='Indicates whether created Clusters should have a floating ip'
                 'or not.')
 @utils.arg('--monitoring-enabled',
-           action='store_true', default=True,
+           action='store_true', default=False,
            help='Indicates whether to setup the container based monitoring stack'
                 'or not.')
 def do_cluster_template_create(cs, args):

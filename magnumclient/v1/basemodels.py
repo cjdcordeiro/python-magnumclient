@@ -22,7 +22,7 @@ CREATION_ATTRIBUTES = ['name', 'image_id', 'flavor_id', 'master_flavor_id',
                        'no_proxy', 'network_driver', 'tls_disabled', 'public',
                        'registry_enabled', 'volume_driver', 'server_type',
                        'docker_storage_driver', 'master_lb_enabled',
-                       'floating_ip_enabled']
+                       'floating_ip_enabled', 'monitoring_enabled']
 
 
 class BaseModel(base.Resource):
