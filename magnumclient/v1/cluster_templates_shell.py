@@ -167,6 +167,10 @@ def _show_cluster_template(cluster_template):
            action='store_true', default=True,
            help='Indicates whether created Clusters should have a floating ip'
                 'or not.')
+@utils.arg('--monitoring-enabled',
+           action='store_true', default=True,
+           help='Indicates whether to setup the container based monitoring stack'
+                'or not.')
 def do_cluster_template_create(cs, args):
     """Create a cluster template."""
     opts = {}
@@ -194,6 +198,7 @@ def do_cluster_template_create(cs, args):
     opts['server_type'] = args.server_type
     opts['master_lb_enabled'] = args.master_lb_enabled
     opts['floating_ip_enabled'] = args.floating_ip_enabled
+    opts['monitoring_enabled'] = args.monitoring_enabled
 
     cluster_template = cs.cluster_templates.create(**opts)
     _show_cluster_template(cluster_template)
